@@ -101,7 +101,7 @@ def main():
 
     #read hex string
     private_key = int(sys.argv[1],16)
-    print private_key
+    #print private_key
     lo = g * private_key
     #print lo
     #0450863ad64a87ae8a2fe83c1af1a8403cb53f53e486d8511dad8a04887e5b23522cd470243453a299fa9e77237716103abc11a1df38855ed6f2ee187e9c582ba6
