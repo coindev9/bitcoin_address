@@ -23,3 +23,11 @@ python private_to_wallet_format.py 0C28FCA386C7A227600B2FE50B7CAE11EC86D3BF1FBE4
 
 5HueCGU8rMjxEXxiPuD5BDku4MkFqeZyd4dZ1jvhTVqvbTLvyTJ
 ```
+
+#### wif_to_private.py
+```
+python wif_to_private.py 5HueCGU8rMjxEXxiPuD5BDku4MkFqeZyd4dZ1jvhTVqvbTLvyTJ
+
+0c28fca386c7a227600b2fe50b7cae11ec86d3bf1fbe471be89827e19d72aa1d
+```
+
