@@ -43,8 +43,6 @@ def b58decode(v, length = None):
     return result
 
 def main():
-
-    #wif = "5HueCGU8rMjxEXxiPuD5BDku4MkFqeZyd4dZ1jvhTVqvbTLvyTJ"
     wif = sys.argv[1]
     res = b58decode(wif)
     decoded = str(res.encode('hex'))
