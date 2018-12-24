@@ -96,15 +96,13 @@ def b58encode(v):
     return (__b58chars[0]*nPad) + result
 
 def main():
-    #private_key = 0x18E14A7B6A307F426A94F8114701E7C8E774E7F9A47E2C2035DB29A206321725
-    #private_key = 11253563012059685825953619222107823549092147699031672238385790369351542642469
+
 
     #read hex string
     private_key = int(sys.argv[1],16)
-    #print private_key
+
     lo = g * private_key
-    #print lo
-    #0450863ad64a87ae8a2fe83c1af1a8403cb53f53e486d8511dad8a04887e5b23522cd470243453a299fa9e77237716103abc11a1df38855ed6f2ee187e9c582ba6
+
     #sha 256
     pu_sha1 = hashlib.sha256()
     if not len(str(lo)) % 2 == 0:
@@ -132,19 +130,14 @@ def main():
     pu_sha3 = hashlib.sha256()
     pu_sha3.update(output.decode('hex'))
     output = pu_sha3.digest().encode('hex')
-    #print output
 
     #add checksum
     che = output[0:8]
-    #print che
     fi = nove+che
 
     #this is Hash 160
-    #print nove
     public_key_wallet_format = "1"+b58encode(fi.decode('hex'))
     print public_key_wallet_format
-    #answer = 16UwLL9Risc3QfPqBUvKofHmBQ7wMtjvM
-
 
 
 if __name__ == '__main__':
