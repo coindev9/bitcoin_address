@@ -42,9 +42,7 @@ def b58encode(v):
     return (__b58chars[0]*nPad) + result
 
 def main():
-    #private_key = 0x18E14A7B6A307F426A94F8114701E7C8E774E7F9A47E2C2035DB29A206321725
-    #private_key = 11253563012059685825953619222107823549092147699031672238385790369351542642469
-    
+  
     #read hex string
     add_80 = "80"+ sys.argv[1]
     private_key = int(add_80,16)
@@ -67,9 +65,6 @@ def main():
 
     public_key_wallet_format = b58encode(fi.decode('hex'))
     print public_key_wallet_format
-    #answer = 5HueCGU8rMjxEXxiPuD5BDku4MkFqeZyd4dZ1jvhTVqvbTLvyTJ
-    #5J1F7GHadZG3sCCKHCwg8Jvys9xUbFsjLnGec4H125Ny1V9nR6V
-
 
 if __name__ == '__main__':
     main()
